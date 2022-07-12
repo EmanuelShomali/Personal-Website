@@ -1,0 +1,42 @@
+:root {
+    --currFont: 'Courier New', Courier, monospace;  /* My Font Variable */
+    --currFontSize: 12px;
+}
+
+h1 {
+    font-family: var(--currFont);    
+}
+
+p {
+    text-align: left;
+    font-family: var(--currFont);
+    font-size: var(--currFontSize);
+}
+
+button {
+    text-align: left;
+    font-family: var(--currFont);
+    font-size: var(--currFontSize);
+    background:none;
+    border:none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: wheat;
+}
+
+div {
+    margin: 1%;   /* Margin:  is extra space outside the div */ 
+    padding: 1%;  /* Padding: is extra space inside the div  */ 
+                  /* Between Margin and Padding Exists the border */
+    
+    background-color: whitesmoke;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.flexBox {
+    display: flex;
+    justify-content: flex-start;
+}

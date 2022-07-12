@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+        <title>Emanuel Shomali</title>
+        <link href = "{% static 'primary/style.css' %}" rel = "stylesheet" >
+
+    </head>
+    <body>
+
+        <div class = flexBox>
+
+            <div>
+                <img src = "{% static 'primary/images/HeadShot.jpg' %}" alt = "Head-Shot" width = "135">
+            </div>
+
+            <div> 
+                <h1>Emanuel Shomali</h1>
+            </div>
+
+            <div> 
+                <p> <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/emanuelshomali">LinkedIn</a> </p>
+                <p> <a target="_blank" rel="noopener noreferrer" href="https://github.com/EmanuelShomali">GitHub</a> </p>
+            </div>
+
+        </div>
+
+        <div>
+
+            <div>
+                <p>B.S. Computer Science Student at the College of William and Mary</p>
+            </div>
+
+            <div class = flexBox>
+                <p>Academic Email:</p>
+                <button type="button" id="copyAcademic" title='Copy Email' onclick="copyEvent('copyAcademic')">emshomali@wm.edu</button>
+            </div>
+
+            <div class = flexBox>
+                <p>Personal Email:</p>
+                <button type="button" id="copyPersonal" title='Copy Email' onclick="copyEvent('copyPersonal')">emanuelshomali@outlook.com</button>
+            </div>
+
+            <div class = flexBox>
+                <p>Phone Number:</p>
+                <button type="button" id="copyPhone" title='Copy Number' onclick="copyEvent('copyPhone')">(410) 967-9451</button>
+            </div>
+
+        </div>        
+
+        <script>
+            function copyEvent(id)
+            {
+                var string = document.getElementById(id);
+                window.getSelection().selectAllChildren(string);
+                document.execCommand("Copy")
+
+                alert("Copied to clipboard");
+            }
+            </script>
+
+    </body>
+</html>
